@@ -11,7 +11,7 @@ class MyPasswordChangeView(PasswordChangeView):
     success_url = reverse_lazy('home')
 
 
-# Create your views here.
+# Create your views here
 
 class SignupView(View):
     def get(self, request):
