@@ -13,8 +13,9 @@ class Vacancy(models.Model):
     salary = models.CharField(max_length=50)
 
 
+
     def __str__(self):
         return self.city
 
     def get_absolute_url(self):
-        return reverse('vacancydetail', args=[str(self.pk)])
+        return reverse('vacancydetail', args=[str(self.slug)])

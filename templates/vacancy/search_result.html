@@ -4,6 +4,7 @@
 {% block content%}
 <h2>Qidiruv natijalari</h2>
     {% for yangilik in barcha_yangiliklar %}
-        <h3>{{yangilik.title}}</h3>
+        <h4><a href="{% url 'main:vacancydetail' yangilik.pk%}" class="text-danger">Country: {{yangilik.country}}</a></h4>
+        <h5>City: {{yangilik.city}}</h5>
     {% endfor %}
 {% endblock content%}
