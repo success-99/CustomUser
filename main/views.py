@@ -1,3 +1,21 @@
 from django.shortcuts import render
+from django.views.generic import ListView, DetailView
+from .models import Vacancy
+
 
 # Create your views here.
+
+class VacancyView(ListView):
+    model = Vacancy
+    template_name = "vacancy/vacancylist.html"
+
+
+class VacancyDetail(DetailView):
+    model = Vacancy
+    template_name = "vacancy/vacancydetail.html"
+    # queryset = Vacancy.objects.all()
+
+class SearchResultList(ListView):
+    model = Vacancy
+    template_name = 'vacancy/search_result.html'
+    context_object_name = 'barcha_yangiliklar'

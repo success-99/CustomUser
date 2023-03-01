@@ -6,32 +6,7 @@
 
 
 {% block content %}
-    <!-- Navbar Start -->
-    <nav class="shadow navbar navbar-expand-lg bg-light">
-        <div class="container">
-          <a class="navbar-brand" href="#">HOME</a>
 
-          <div class="collapse navbar-collapse" id="navbarContent">
-
-
-
-              {% if request.user.is_authenticated %}
-
-                    <a href="{% url 'logout' %}" class="btn btn-primary">Logout</a>
-                    <a href="{% url 'users:pch' %}" class="btn btn-primary">Password Change</a>
-
-              {% else %}
-
-                      <a href="{% url 'login' %}" class="btn btn-primary">Login</a>
-                      <a href="{% url 'users:signup' %}" class="btn btn-primary">SignUp</a>
-
-
-              {% endif %}
-
-          </div>
-        </div>
-    </nav>
-    <!-- Navbar End -->
 
 
     <div class="container">
