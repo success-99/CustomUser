@@ -18,4 +18,4 @@ class Vacancy(models.Model):
         return self.city
 
     def get_absolute_url(self):
-        return reverse('vacancydetail', args=[str(self.slug)])
+        return reverse('vacancydetail', args=[str(self.pk)])

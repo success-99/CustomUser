@@ -10,25 +10,20 @@
 
 
 
-    {% for pos in object_list %}
+    {% for post in object_list %}
 
           <div class="row mt-2">
               <div class="col-sm-4">
                 <div class="card">
                   <div class="card-body">
-                    <h3 class="card-title post-entry"><a href="{% url 'main:vacancydetail' pos.pk %}">{{pos.country}} </a></h3>
-                    <p class="card-text stp">{{ pos.salary }}</p>
+                    <h3 class="card-title post-entry"><a href="{% url 'main:vacancydetail' post.pk %}">{{post.country}} </a></h3>
+                    <p class="card-text stp">{{ post.salary }}</p>
                   </div>
                 </div>
               </div>
             </div>
 
-
-
-
-
-
-   {% endfor %}
+    {% endfor %}
 
 
 

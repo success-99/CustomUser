@@ -13,7 +13,6 @@ class VacancyView(ListView):
 class VacancyDetail(DetailView):
     model = Vacancy
     template_name = "vacancy/vacancydetail.html"
-    queryset = Vacancy.objects.all()
 
 
 class SearchResultList(ListView):
