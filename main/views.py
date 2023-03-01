@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.views.generic import ListView, DetailView
 from .models import Vacancy
 from django.db.models import Q
+from hitcount.views import HitCountDetailView
+
 
 # Create your views here.
 
@@ -10,10 +12,11 @@ class VacancyView(ListView):
     template_name = "vacancy/vacancylist.html"
 
 
-class VacancyDetail(DetailView):
+class VacancyDetail(HitCountDetailView):
     model = Vacancy
     template_name = "vacancy/vacancydetail.html"
     context_object_name = "vac"
+    count_hit = True
 
 
 class SearchResultList(ListView):
@@ -26,3 +29,4 @@ class SearchResultList(ListView):
         return Vacancy.objects.filter(
             Q(country__icontains=query) | Q(university__icontains=query)
         )
+

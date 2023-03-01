@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load hitcount_tags %}
 {% block title %}
   VacansyDetail
 {% endblock title %}
@@ -11,5 +12,6 @@
         <p><strong>Gender:</strong> {{ vac.gender }}</p>
         <p><strong>Salary:</strong> {{ vac.salary }}</p>
         <p><strong>Phone:</strong> {{ vac.phone }}</p>
+        <p><strong>👁: </strong>{% get_hit_count for vac %}</p>
 
 {% endblock content %}
