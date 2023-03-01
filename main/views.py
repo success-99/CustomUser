@@ -13,6 +13,7 @@ class VacancyView(ListView):
 class VacancyDetail(DetailView):
     model = Vacancy
     template_name = "vacancy/vacancydetail.html"
+    context_object_name = "vac"
 
 
 class SearchResultList(ListView):

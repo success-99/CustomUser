@@ -4,6 +4,12 @@
 {% endblock title %}
 {% block content %}
 <h3> VacansyDetail</h3>
-        <h3>{{post.country}}</h3>
-        <h3>{{post.salary}}</h3>
+        <p><strong>Country:</strong> {{ vac.country }}</p>
+        <p><strong>City:</strong> {{ vac.city }}</p>
+        <p><strong>University:</strong> {{ vac.university }}</p>
+        <p><strong>Rank:</strong> {{ vac.rank }}</p>
+        <p><strong>Gender:</strong> {{ vac.gender }}</p>
+        <p><strong>Salary:</strong> {{ vac.salary }}</p>
+        <p><strong>Phone:</strong> {{ vac.phone }}</p>
+
 {% endblock content %}
