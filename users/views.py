@@ -24,3 +24,7 @@ class SignupView(View):
             messages.success(request, 'Sizning hisobingiz muvaffaqiyatli yaratildi !')
             return redirect('login')
         return render(request, 'registration/signup.html', {'form': form})
+
+
+def login_view(request):
+    pass
